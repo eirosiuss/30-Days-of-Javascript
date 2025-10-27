@@ -1,4 +1,5 @@
 import ProfileThree from './ProfileThree.jsx'
+import ProfileFour from './ProfileFour.jsx'
 import "./App.css";
 
 function getImageUrl(imageId, size = "s") {
@@ -91,6 +92,7 @@ function App() {
     <>
     <Gallery />
     <ProfileThree/>
+    <ProfileFour/>
     </>
 
   ) 
