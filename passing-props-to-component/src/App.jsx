@@ -1,6 +1,4 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import ProfileThree from './ProfileThree.jsx'
 import "./App.css";
 
 function getImageUrl(imageId, size = "s") {
@@ -89,7 +87,13 @@ function Gallery() {
 }
 
 function App() {
-  return <Gallery />;
+  return (
+    <>
+    <Gallery />
+    <ProfileThree/>
+    </>
+
+  ) 
 }
 
 export default App;
