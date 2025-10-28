@@ -7,6 +7,7 @@ import ScientistsList from './ScientistsList.jsx'
 import RecipeList from './RecipeList.jsx'
 import RecipeListTwo from './RecipeListTwo.jsx'
 import Poem from './Poem.jsx'
+import GalleryTwo from './GalleryTwo.jsx'
 import "./App.css";
 
 function getImageUrl(imageId, size = "s") {
@@ -97,6 +98,7 @@ function Gallery() {
 function App() {
   return (
     <>
+    <GalleryTwo/>
     <Poem/>
     <RecipeListTwo/>
     <Gallery />
