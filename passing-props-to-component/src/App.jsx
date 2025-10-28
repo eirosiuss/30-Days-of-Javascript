@@ -3,6 +3,8 @@ import ProfileFour from './ProfileFour.jsx'
 import PackingList from './PackingList.jsx'
 import PackingListTwo from './PackingListTwo.jsx'
 import DrinkList from './DrinkList.jsx'
+import ScientistsList from './ScientistsList.jsx'
+import RecipeList from './RecipeList.jsx'
 import "./App.css";
 
 function getImageUrl(imageId, size = "s") {
@@ -99,6 +101,8 @@ function App() {
     <PackingList/>
     <PackingListTwo/>
     <DrinkList/>
+    <ScientistsList/>
+    <RecipeList/>
     </>
 
   ) 
