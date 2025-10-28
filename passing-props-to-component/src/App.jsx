@@ -2,6 +2,7 @@ import ProfileThree from './ProfileThree.jsx'
 import ProfileFour from './ProfileFour.jsx'
 import PackingList from './PackingList.jsx'
 import PackingListTwo from './PackingListTwo.jsx'
+import DrinkList from './DrinkList.jsx'
 import "./App.css";
 
 function getImageUrl(imageId, size = "s") {
@@ -97,6 +98,7 @@ function App() {
     <ProfileFour/>
     <PackingList/>
     <PackingListTwo/>
+    <DrinkList/>
     </>
 
   ) 
