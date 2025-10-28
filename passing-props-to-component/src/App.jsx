@@ -12,6 +12,7 @@ import "./App.css";
 import Form from './Form.jsx'
 import FeedbackForm from './FeedbackForm.jsx'
 import FeedbackFormTwo from './FeedbackFormTwo.jsx'
+import RequestTracker from './RequestTracker.jsx'
 
 function getImageUrl(imageId, size = "s") {
   return "https://i.imgur.com/" + imageId + size + ".jpg";
@@ -101,6 +102,7 @@ function Gallery() {
 function App() {
   return (
     <>
+    <RequestTracker/>
     <FeedbackFormTwo/>
     <FeedbackForm/>
     <Form/>
