@@ -10,6 +10,7 @@ import Poem from './Poem.jsx'
 import GalleryTwo from './GalleryTwo.jsx'
 import "./App.css";
 import Form from './Form.jsx'
+import FeedbackForm from './FeedbackForm.jsx'
 
 function getImageUrl(imageId, size = "s") {
   return "https://i.imgur.com/" + imageId + size + ".jpg";
@@ -99,6 +100,7 @@ function Gallery() {
 function App() {
   return (
     <>
+    <FeedbackForm/>
     <Form/>
     <GalleryTwo/>
     <Poem/>
