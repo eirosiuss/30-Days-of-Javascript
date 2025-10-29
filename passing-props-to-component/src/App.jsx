@@ -16,7 +16,7 @@ import RequestTracker from './RequestTracker.jsx'
 import Scoreboard from './Scoreboard.jsx'
 import Canvas from './Canvas.jsx'
 import ShoppingCart from './ShoppingCart.jsx'
-
+import ShoppingCartTwo from './ShoppingCartTwo.jsx'
 function getImageUrl(imageId, size = "s") {
   return "https://i.imgur.com/" + imageId + size + ".jpg";
 }
@@ -105,6 +105,7 @@ function Gallery() {
 function App() {
   return (
     <>
+    <ShoppingCartTwo/>
     <ShoppingCart/>
     <Canvas/>
     <Scoreboard/>
