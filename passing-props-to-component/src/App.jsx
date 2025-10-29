@@ -14,6 +14,7 @@ import FeedbackForm from './FeedbackForm.jsx'
 import FeedbackFormTwo from './FeedbackFormTwo.jsx'
 import RequestTracker from './RequestTracker.jsx'
 import Scoreboard from './Scoreboard.jsx'
+import Canvas from './Canvas.jsx'
 
 function getImageUrl(imageId, size = "s") {
   return "https://i.imgur.com/" + imageId + size + ".jpg";
@@ -103,6 +104,7 @@ function Gallery() {
 function App() {
   return (
     <>
+    <Canvas/>
     <Scoreboard/>
     <RequestTracker/>
     <FeedbackFormTwo/>
