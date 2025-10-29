@@ -19,6 +19,7 @@ import ShoppingCart from './ShoppingCart.jsx'
 import ShoppingCartTwo from './ShoppingCartTwo.jsx'
 import TaskApp from './TaskApp.jsx'
 import Picture from './Picture.jsx'
+import EditProfile from './EditProfile.jsx'
 function getImageUrl(imageId, size = "s") {
   return "https://i.imgur.com/" + imageId + size + ".jpg";
 }
@@ -107,6 +108,7 @@ function Gallery() {
 function App() {
   return (
     <>
+    <EditProfile/>
     <Picture/>
     <TaskApp/>
     <ShoppingCartTwo/>
