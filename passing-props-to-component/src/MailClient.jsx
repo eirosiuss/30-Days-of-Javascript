@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function MailClient() {
   const [selectedId, setSelectedId] = useState(null);
@@ -15,7 +15,7 @@ export default function MailClient() {
     <>
       <h2>Inbox</h2>
       <ul>
-        {letters.map(letter => (
+        {letters.map((letter) => (
           <Letter
             key={letter.id}
             letter={letter}
@@ -28,24 +28,16 @@ export default function MailClient() {
         ))}
         <hr />
         <p>
-          <b>
-            You selected {selectedCount} letters
-          </b>
+          <b>You selected {selectedCount} letters</b>
         </p>
       </ul>
     </>
   );
 }
 
-function Letter({
-  letter,
-  onToggle,
-  isSelected,
-}) {
+function Letter({ letter, onToggle, isSelected }) {
   return (
-    <li className={
-      isSelected ? 'selected' : ''
-    }>
+    <li className={isSelected ? "selected" : ""}>
       <label>
         <input
           type="checkbox"
@@ -57,19 +49,23 @@ function Letter({
         {letter.subject}
       </label>
     </li>
-  )
+  );
 }
 
-const letters = [{
-  id: 0,
-  subject: 'Ready for adventure?',
-  isStarred: true,
-}, {
-  id: 1,
-  subject: 'Time to check in!',
-  isStarred: false,
-}, {
-  id: 2,
-  subject: 'Festival Begins in Just SEVEN Days!',
-  isStarred: false,
-}];
+const letters = [
+  {
+    id: 0,
+    subject: "Ready for adventure?",
+    isStarred: true,
+  },
+  {
+    id: 1,
+    subject: "Time to check in!",
+    isStarred: false,
+  },
+  {
+    id: 2,
+    subject: "Festival Begins in Just SEVEN Days!",
+    isStarred: false,
+  },
+];
