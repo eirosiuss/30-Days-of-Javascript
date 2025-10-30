@@ -22,6 +22,7 @@ import Picture from './Picture.jsx'
 import EditProfile from './EditProfile.jsx'
 import MailClient from './MailClient.jsx'
 import SyncedInputs from './SyncedInputs.jsx'
+import FilterableList from './FilterableList.jsx'
 function getImageUrl(imageId, size = "s") {
   return "https://i.imgur.com/" + imageId + size + ".jpg";
 }
@@ -110,6 +111,7 @@ function Gallery() {
 function App() {
   return (
     <>
+    <FilterableList/>
     <SyncedInputs/>
     <MailClient/>
     <EditProfile/>
