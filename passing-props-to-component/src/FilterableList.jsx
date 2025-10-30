@@ -1,25 +1,34 @@
 import { useState } from "react";
 
 export default function FilterableList() {
-  return (
-    <>
-      <SearchBar />
-      <hr />
-      <List items={foods} />
-    </>
-  );
-}
-
-function SearchBar() {
   const [query, setQuery] = useState("");
+
+  const filtered = filterItems(foods, query);
 
   function handleChange(e) {
     setQuery(e.target.value);
   }
 
   return (
+    <>
+      <SearchBar value={query} onChange={handleChange} />
+      <hr />
+      <List items={filtered} />
+    </>
+  );
+}
+
+function filterItems(items, query) {
+  query = query.toLowerCase();
+  return items.filter((item) =>
+    item.name.split(" ").some((word) => word.toLowerCase().startsWith(query))
+  );
+}
+
+function SearchBar({ value, onChange }) {
+  return (
     <label>
-      Search: <input value={query} onChange={handleChange} />
+      Search: <input value={value} onChange={onChange} />
     </label>
   );
 }
@@ -36,13 +45,6 @@ function List({ items }) {
         ))}
       </tbody>
     </table>
-  );
-}
-
-function filterItems(items, query) {
-  query = query.toLowerCase();
-  return items.filter((item) =>
-    item.name.split(" ").some((word) => word.toLowerCase().startsWith(query))
   );
 }
 
