@@ -1,14 +1,60 @@
 import { useState } from "react";
 
-export default function MailClient() {
-  const [selectedId, setSelectedId] = useState(null);
+// mano sprendimas
+// export default function MailClient() {
+//   const [sentences, setSentences] = useState(letters);
 
-  // TODO: allow multiple selection
-  const selectedCount = 1;
+//   const selectedCount = sentences
+//     .map((l) => l.isStarred)
+//     .filter((l) => l).length;
+
+//   function handleToggle(toggledId) {
+//     setSentences(
+//       sentences.map((s) => {
+//         if (s.id === toggledId) {
+//           return { ...s, isStarred: !s.isStarred };
+//         } else {
+//           return s;
+//         }
+//       })
+//     );
+//   }
+
+//   return (
+//     <>
+//       <h2>Inbox</h2>
+//       <ul>
+//         {sentences.map((letter) => (
+//           <Letter
+//             key={letter.id}
+//             letter={letter}
+//             isSelected={letter.isStarred}
+//             onToggle={handleToggle}
+//           />
+//         ))}
+//         <hr />
+//         <p>
+//           <b>You selected {selectedCount} letters</b>
+//         </p>
+//       </ul>
+//     </>
+//   );
+// }
+
+export default function MailClient() {
+  const [selectedIds, setSelectedIds] = useState([]);
+
+  const selectedCount = selectedIds.length;
 
   function handleToggle(toggledId) {
-    // TODO: allow multiple selection
-    setSelectedId(toggledId);
+    // Was it previously selected?
+    if (selectedIds.includes(toggledId)) {
+      // Then remove this ID from the array.
+      setSelectedIds(selectedIds.filter((id) => id !== toggledId));
+    } else {
+      // Otherwise, add this ID to the array.
+      setSelectedIds([...selectedIds, toggledId]);
+    }
   }
 
   return (
@@ -19,10 +65,7 @@ export default function MailClient() {
           <Letter
             key={letter.id}
             letter={letter}
-            isSelected={
-              // TODO: allow multiple selection
-              letter.id === selectedId
-            }
+            isSelected={selectedIds.includes(letter.id)}
             onToggle={handleToggle}
           />
         ))}
