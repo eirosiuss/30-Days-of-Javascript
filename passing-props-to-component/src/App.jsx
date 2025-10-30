@@ -21,6 +21,7 @@ import TaskApp from './TaskApp.jsx'
 import Picture from './Picture.jsx'
 import EditProfile from './EditProfile.jsx'
 import MailClient from './MailClient.jsx'
+import SyncedInputs from './SyncedInputs.jsx'
 function getImageUrl(imageId, size = "s") {
   return "https://i.imgur.com/" + imageId + size + ".jpg";
 }
@@ -109,6 +110,7 @@ function Gallery() {
 function App() {
   return (
     <>
+    <SyncedInputs/>
     <MailClient/>
     <EditProfile/>
     <Picture/>
