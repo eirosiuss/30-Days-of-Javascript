@@ -26,6 +26,7 @@ import FilterableList from "./FilterableList.jsx";
 import FormTwo from "./FormTwo.jsx";
 import FormThree from "./FormThree.jsx";
 import ContactManager from "./ContactManager.jsx";
+import GalleryThree from './GalleryThree.jsx';
 function getImageUrl(imageId, size = "s") {
   return "https://i.imgur.com/" + imageId + size + ".jpg";
 }
@@ -113,6 +114,8 @@ function Gallery() {
 function App() {
   return (
     <>
+      <GalleryThree />
+      <hr />
       <ContactManager />
       <hr />
       <FormThree />
