@@ -28,7 +28,8 @@ import FormThree from "./FormThree.jsx";
 import ContactManager from "./ContactManager.jsx";
 import GalleryThree from "./GalleryThree.jsx";
 import ContactList from "./ContactList.jsx";
-import DispatchActions from './DispatchActions.jsx'
+import DispatchActions from "./DispatchActions.jsx";
+import ReplaceProp from "./ReplaceProp.jsx";
 
 function getImageUrl(imageId, size = "s") {
   return "https://i.imgur.com/" + imageId + size + ".jpg";
@@ -117,6 +118,8 @@ function Gallery() {
 function App() {
   return (
     <>
+      <ReplaceProp />
+      <hr />
       <DispatchActions />
       <hr />
       <ContactList />
