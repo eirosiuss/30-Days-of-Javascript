@@ -14,7 +14,7 @@ export default function Messenger() {
         dispatch={dispatch}
       />
       <Chat
-        // key={contact.id}
+        key={contact.id}
         message={message}
         contact={contact}
         dispatch={dispatch}
@@ -47,7 +47,7 @@ function ContactList({ contacts, selectedId, dispatch }) {
   );
 }
 
-function Chat({ contact, message, dispatch }) {
+function Chat({ contact, message, dispatch }) {   
   return (
     <section className="chat">
       <textarea
@@ -63,7 +63,17 @@ function Chat({ contact, message, dispatch }) {
         }}
       />
       <br />
-      <button>Send to {contact.email}</button>
+      <button
+        onClick={() =>  {
+            alert(contact.email + ' '+ message)
+            dispatch({
+                type: "send_message",
+            })
+        }}
+      >
+        
+        Send to {contact.email}
+      </button>
     </section>
   );
 }
